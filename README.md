@@ -1,11 +1,24 @@
 # hop-plugin-snews
 
+![](https://github.com/SNEWS2/hop-plugin-snews/workflows/build/badge.svg)
+
+|              |        |
+| ------------ | ------ |
+| **Docs:**    | https://hop-plugin-snews.readthedocs.io/en/stable/  |
+
 A hop-client plugin for SNEWS.
+
+## Installation
+
+To install with pip:
+
+```
+pip install -U hop-plugin-snews
 
 ### Quickstart
 
 ```
-from hop.plugins import snews
+from hop.plugins.snews import SNEWSObservation, SNEWSHeartbeat
 
 # instantiate custom messages, etc.
 ```
