@@ -14,6 +14,7 @@ To install with pip:
 
 ```
 pip install -U hop-plugin-snews
+```
 
 ### Quickstart
 
