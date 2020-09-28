@@ -4,7 +4,7 @@
 
 |              |        |
 | ------------ | ------ |
-| **Docs:**    | https://hop-plugin-snews.readthedocs.io/en/stable/  |
+| **Docs:**    | https://hop-plugin-snews.readthedocs.io  |
 
 A hop-client plugin for SNEWS.
 
