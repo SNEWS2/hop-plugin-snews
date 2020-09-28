@@ -10,6 +10,7 @@ help :
 	@echo '  make changelog             update changelog based on version'
 	@echo '  make pypi-dist             make binary and source packages for PyPI'
 	@echo '  make pypi-dist-check       verify binary and source packages for PyPI'
+	@echo '  make pypi-upload           upload to PyPI'
 	@echo '  make conda-build           make binary and source packages for conda-forge'
 	@echo
 
@@ -48,6 +49,10 @@ pypi-dist :
 .PHONY: pypi-dist-check
 pypi-dist-check :
 	twine check dist/*
+
+.PHONY: pypi-upload
+pypi-upload:
+	twine upload dist/*
 
 .PHONY: conda-build
 conda-build :
