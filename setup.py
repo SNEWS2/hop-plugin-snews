@@ -8,7 +8,6 @@ with open(os.path.join(this_dir, 'README.md'), 'rb') as f:
 
 # requirements
 install_requires = [
-    "dataclasses-jsonschema",
     "hop-client >= 0.2",
 ]
 extras_require = {

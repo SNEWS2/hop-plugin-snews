@@ -1,18 +1,14 @@
 from dataclasses import dataclass
 import json
 
-from dataclasses_jsonschema import JsonSchemaMixin
-
 from hop.models import MessageModel
 from hop import plugins
 
 
 @dataclass
-class SNEWSBase(MessageModel, JsonSchemaMixin):
+class SNEWSBase(MessageModel):
     """
     Defines a base SNEWS message type.
-
-    Formatted as a dictionary with the schema defined in the jsonSchema file.
 
     """
     message_id: str
@@ -20,7 +16,6 @@ class SNEWSBase(MessageModel, JsonSchemaMixin):
     @classmethod
     def load(cls, input_):
         """
-
         :param input: A serialized json string converted by asdict().
         :return:
         """
@@ -36,8 +31,6 @@ class SNEWSAlert(SNEWSBase):
     """
     Defines a SNEWS alert message.
 
-    Formatted as a dictionary with the schema defined in the jsonSchema file.
-
     """
     sent_time: str
     machine_time: str
@@ -48,8 +41,6 @@ class SNEWSAlert(SNEWSBase):
 class SNEWSHeartbeat(SNEWSBase):
     """
     Defines a heartbeat published by a detector.
-
-    Formatted as a dictionary with the schema defined in the jsonSchema file.
 
     """
     detector_id: str
@@ -64,8 +55,6 @@ class SNEWSHeartbeat(SNEWSBase):
 class SNEWSObservation(SNEWSBase):
     """
     Defines an observation published by a detector.
-
-    Formatted as a dictionary with the schema defined in the jsonSchema file.
 
     """
     detector_id: str
