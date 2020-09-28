@@ -8,7 +8,7 @@ User's Guide
    :maxdepth: 2
 
    user/installation
-   user/quickstart
+   user/messages
 
 API Reference
 -------------
